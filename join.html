@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>N9NE</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .form-container {
+      max-width: 500px;
+      margin: 40px auto;
+      background-color: #1c1c1c;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 255, 128, 0.2);
+    }
+
+    .form-container h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      background-color: #333;
+      color: white;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: 2px solid #4caf50;
+    }
+
+    .submit-btn {
+      background-color: #4caf50;
+      color: white;
+      padding: 12px 24px;
+      font-size: 1em;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .submit-btn:hover {
+      background-color: #388e3c;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      color: #2196f3;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="fade-in">
+  <div class="header-top">
+    <img src="logo.jpg" alt="D Fitness Studio Logo" class="logo" />
+    <div class="brand-text">
+      <h1>N9NE</h1>
+      <p>Your Fitness Partner</p>
+    </div>
+  </div>
+  <nav>
+    <a href="#branches">Our Branches</a> |
+    <a href="#about">Why Choose Us</a> |
+    <a href="join.html" class="join-button">Join Now</a>
+  </nav>
+</header>
+
+  <div class="form-container fade-in">
+    <h2>Fill Your Details</h2>
+    <form action="https://formsubmit.co/muvvamanojk@gmail.com" method="POST">
+      <!-- Protect from spam -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_subject" value="New Membership Enquiry - D Fitness Studio">
+
+      <div class="form-group">
+        <label for="name">Full Name*</label>
+        <input type="text" id="name" name="Full Name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number*</label>
+        <input type="tel" id="phone" name="Phone Number" pattern="[0-9]{10}" placeholder="10-digit number" required />
+      </div>
+
+      <div class="form-group">
+        <label for="branch">Select Branch*</label>
+        <select id="branch" name="Branch" required>
+          <option value="">-- Choose Branch --</option>
+          <option value="Kandukur">Kandukur</option>
+          <option value="Nellore">Nellore</option>
+          <option value="Guntur">Guntur</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Your Fitness Goals (Optional)</label>
+        <textarea id="message" name="Fitness Goals" rows="4" placeholder="e.g., Weight loss, muscle gain, etc."></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+
+    <a href="index.html" class="back-link">← Back to Home</a>
+  </div>
+
+  <footer>
+    &copy; <span id="year"></span> D Fitness Studio. All rights reserved.
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
